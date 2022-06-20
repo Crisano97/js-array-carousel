@@ -25,8 +25,22 @@ for (index = 0; index < images.length; index++) {
 
     imagesWrapper.append(newImage);  
 
+
+
 }
 
 let imageList = document.querySelectorAll(".d-none");
     imageList[0].classList.remove('d-none')
     imageList[0].classList.add('active')
+
+const btnNext = document.getElementById('next-button');
+ 
+    btnNext.addEventListener('click', function() {
+       imageList[0].classList.add('d-none')
+       imageList[0].classList.remove('active')
+   
+       imageList[1].classList.remove('d-none')
+       imageList[1].classList.add('active')
+
+       
+    });
