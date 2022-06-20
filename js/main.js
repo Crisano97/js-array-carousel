@@ -15,8 +15,6 @@ const images = [
 
 const imagesWrapper = document.querySelector('.carousel-wrapper .carousel-image-container');
 
-
-
 for (index = 0; index < images.length; index++) {
 
     const newImage = document.createElement('img');
@@ -24,7 +22,11 @@ for (index = 0; index < images.length; index++) {
 
     newImage.setAttribute('src', images[index]);
 
-    
 
-    imagesWrapper.append(newImage);
-}   
+    imagesWrapper.append(newImage);  
+
+}
+
+let imageList = document.querySelectorAll(".d-none");
+    imageList[0].classList.remove('d-none')
+    imageList[0].classList.add('active')
