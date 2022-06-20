@@ -45,11 +45,32 @@ const btnNext = document.getElementById('next-button');
 
         activeIndex++;
 
-        imageList[activeIndex].classList.remove('d-none');
 
         if (activeIndex === imageList.length){
             activeIndex = 0;
         }
+
+        imageList[activeIndex].classList.remove('d-none');
+
         
     });
+
+    const btnPrev = document.getElementById('prev-button');
+ 
+    btnPrev.addEventListener('click', function() {
+
+
+        imageList[activeIndex].classList.add('d-none');
+
+        activeIndex--;
+
+
+        if (activeIndex === imageList.length){
+            activeIndex = imageList.length[-1];
+        }
+
+        imageList[activeIndex].classList.remove('d-none');
+
+        
+    });    
 
