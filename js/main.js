@@ -29,18 +29,27 @@ for (index = 0; index < images.length; index++) {
 
 }
 
+
 let imageList = document.querySelectorAll(".d-none");
     imageList[0].classList.remove('d-none')
-    imageList[0].classList.add('active')
+    // imageList[0].classList.add('active')
 
 const btnNext = document.getElementById('next-button');
+
+    let activeIndex = 0;
  
     btnNext.addEventListener('click', function() {
-       imageList[0].classList.add('d-none')
-       imageList[0].classList.remove('active')
-   
-       imageList[1].classList.remove('d-none')
-       imageList[1].classList.add('active')
 
-       
+
+        imageList[activeIndex].classList.add('d-none');
+
+        activeIndex++;
+
+        imageList[activeIndex].classList.remove('d-none');
+
+        if (activeIndex === imageList.length){
+            activeIndex = 0;
+        }
+        
     });
+
