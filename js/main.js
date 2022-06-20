@@ -65,8 +65,8 @@ const btnNext = document.getElementById('next-button');
         activeIndex--;
 
 
-        if (activeIndex === imageList.length){
-            activeIndex = imageList.length[-1];
+        if (activeIndex === -1){
+            activeIndex = imageList.length -1;
         }
 
         imageList[activeIndex].classList.remove('d-none');
